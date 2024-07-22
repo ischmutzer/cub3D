@@ -1,0 +1,21 @@
+NO img/grey_stone.xpm
+SO img/purple_stone.xpm
+WE img/red_brick.xpm
+EA img/wood.xpm
+
+C 200,200,200
+F 20,20,20
+
+11111111111
+10000000001
+10S01111111
+10000000001
+1000kkkkkk1
+1000akakak1
+1100jAJj221
+1000A1
+10001
+10001
+10001
+10001
+11111
