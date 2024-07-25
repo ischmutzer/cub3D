@@ -6,7 +6,7 @@
 /*   By: amalkhal <amalkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 20:42:23 by amalkhal          #+#    #+#             */
-/*   Updated: 2024/07/06 21:19:10 by amalkhal         ###   ########.fr       */
+/*   Updated: 2024/07/25 13:05:44 by amalkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ void	load_tex(t_game *game, t_math *math)
 			game->img_data = mlx_get_data_addr(game->we_wall.ptr,
 					&game->bits_per_pixel, &game->size_line, &game->endian);
 	}
+	if (game->img_data == NULL)
+		freeing_mlx_failed(game, "mlx_get_data_addr failed", 4);
 }
 
 void	initialize_raycasting(t_math *math, t_vectors *player, int x)

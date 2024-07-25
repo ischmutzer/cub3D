@@ -67,6 +67,8 @@ void	puting_imges(t_game *game)
 {
 	game->img.addr = mlx_get_data_addr(game->img.img, &game->img.bits_per_pixel,
 			&game->img.line_length, &game->img.endian);
+	if (!game->img.addr)
+		freeing_mlx_failed(game, "Error : Failed to get image address\n", 3);
 	game->no_wall.ptr = mlx_xpm_file_to_image(game->mlx, game->map->north,
 			&game->no_wall.width, &game->no_wall.height);
 	if (!game->no_wall.ptr || game->no_wall.width != 64
