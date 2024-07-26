@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   draw_map.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ischmutz <ischmutz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amalkhal <amalkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 15:25:25 by amalkhal          #+#    #+#             */
-/*   Updated: 2024/07/22 15:27:37 by ischmutz         ###   ########.fr       */
+/*   Updated: 2024/07/26 13:47:34 by amalkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ void	draw_map(t_game *game, t_map *map)
 		{
 			if (game->map->cells[y][x] == '1')
 				color = WALL_COLOR;
-			else
+			else if (game->map->cells[y][x] == '0')
 				color = EMPTY_SPACE_COLOR;
 			draw_mini_map_cell(game, x - game->start_x,
 				y - game->start_y, color);
