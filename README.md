@@ -25,3 +25,13 @@ This project was designed to:
    ```bash
    git clone https://github.com/yourusername/cub3d.git
    cd cub3d
+
+2. **Compile the project:**
+   ```bash
+   make
+3. **Run the game:**
+   ```bash
+   ./cub3D maps/valid/subject.cub
+4. Dependencies: Make sure to have the necessary libraries installed, such as:
+   . minilibx for graphics
+   . Standard C libraries
